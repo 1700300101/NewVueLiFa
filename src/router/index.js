@@ -4,30 +4,35 @@ import login from '../components/login.vue'
 import Home from '../components/Home.vue'
 import Welcome from '../components/welcome.vue'
 import Users from '../components/User/User.vue'
+import Cards from '../components/Card/Card.vue'
 
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  routes: [
-    { path: '/', redirect: '/login' },
-    { path: '/login', component: login },
-    {
-      path: '/home',
-      component: Home,
-      redirect: '/welcome',
-      children: [
+    routes: [
+        { path: '/', redirect: '/login' },
+        { path: '/login', component: login },
         {
-          path: '/welcome',
-          component: Welcome
-        },
-        {
-          path: '/viewUser.html',
-          component: Users
+            path: '/home',
+            component: Home,
+            redirect: '/welcome',
+            children: [{
+                    path: '/welcome',
+                    component: Welcome
+                },
+                {
+                    path: '/viewUser.html',
+                    component: Users
+                },
+                {
+                    path: '/viewCard.html',
+                    component: Cards
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 })
+
 
 // router.beforeEach((to, from, next) => {
 // to 将要访问的路径

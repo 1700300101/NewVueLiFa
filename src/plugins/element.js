@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { Button, Form, FormItem, Input, Message, Menu, Submenu, MenuItem, Container, Header, Aside, Main, Breadcrumb, BreadcrumbItem, Card, Row, Col, TableColumn, Table, Switch, Tooltip, Pagination, MenuItemGroup, Dialog } from 'element-ui'
+import { Button, Form, FormItem, Input, Message, Menu, Submenu, MenuItem, Container, Header, Aside, Main, Breadcrumb, BreadcrumbItem, Card, Row, Col, TableColumn, Table, Switch, Tooltip, Pagination, MenuItemGroup, Dialog, Popconfirm } from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Form)
@@ -24,4 +24,5 @@ Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(MenuItemGroup)
 Vue.use(Dialog)
+Vue.use(Popconfirm)
 Vue.prototype.$message = Message
